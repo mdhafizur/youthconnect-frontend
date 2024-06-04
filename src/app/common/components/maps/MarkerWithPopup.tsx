@@ -29,6 +29,7 @@ interface MarkerWithPopupProps {
   isMarkedFavorite?: boolean;
   item?: any;
   markerOptions?: MarkerOptions;
+  onMarkerClick?: () => void;
 }
 
 const MarkerWithPopup: React.FC<MarkerWithPopupProps> = ({
@@ -40,6 +41,7 @@ const MarkerWithPopup: React.FC<MarkerWithPopupProps> = ({
   isMarkedFavorite,
   item,
   markerOptions,
+  onMarkerClick,
 }) => {
   const [locationDetails, setLocationDetails] =
     useState<LocationDetails | null>(null);
@@ -58,7 +60,16 @@ const MarkerWithPopup: React.FC<MarkerWithPopupProps> = ({
   };
 
   return (
-    <Marker position={position} icon={icon} {...markerOptions}>
+    <Marker
+      position={position}
+      icon={icon}
+      {...markerOptions}
+      eventHandlers={{
+        click: () => {
+          if (onMarkerClick) onMarkerClick();
+        },
+      }}
+    >
       <Popup keepInView={true}>
         {popupContent}
 
@@ -88,7 +99,9 @@ const MarkerWithPopup: React.FC<MarkerWithPopupProps> = ({
             </p>
           </div>
         )}
+
         <br />
+
         {onMarkAsFavoriteClick && (
           <div className="flex items-center space-x-2">
             <button

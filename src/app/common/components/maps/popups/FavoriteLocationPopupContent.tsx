@@ -1,6 +1,6 @@
 import React from "react";
 
-const FavoriteLocationPopupContent = ({ favoriteFacility, distance }) => {
+const FavoriteLocationPopupContent = ({ favoriteFacility }) => {
   return (
     <div className="text-left">
       <strong>Favorite Location</strong>
@@ -43,11 +43,6 @@ const FavoriteLocationPopupContent = ({ favoriteFacility, distance }) => {
       <p>
         <strong>Coordinates:</strong> {favoriteFacility.geometry.coordinates}
       </p>
-      {distance && (
-        <p>
-          <strong>Distance from Home:</strong> {distance.toFixed(2)} meters
-        </p>
-      )}
     </div>
   );
 };
