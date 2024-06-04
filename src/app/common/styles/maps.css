@@ -1,0 +1,51 @@
+/* maps.css */
+
+/* Adjust map container size */
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Change marker color */
+.leaflet-marker-icon {
+  color: red;
+}
+
+/* Customize popup background color */
+.leaflet-popup-content {
+  background-color: white;
+}
+
+/* Adjust custom marker icon size */
+.custom-marker-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Adjust map container positioning */
+.map-container {
+  position: relative;
+}
+
+/* Set max width for map container */
+@media (max-width: 768px) {
+  .map-container {
+    max-width: 100%;
+    height: 28rem;
+  }
+}
+
+/* Custom CSS to style the routing panel on right */
+.leaflet-routing-container .leaflet-routing-alternatives-container {
+  border-top: 1px solid #ddd;
+  color: black;
+}
+
+
+form.open {
+  color: black;
+}
+
+input.glass {
+  color: black;
+}

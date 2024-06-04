@@ -1,0 +1,33 @@
+export interface Properties {
+  objectId: number;
+  id: number;
+  traeger: string;
+  leistungen?: string;
+  bezeichnung: string;
+  kurzbezeichnung: string;
+  strasse: string;
+  plz: string;
+  ort: string;
+  telefon: string;
+  fax?: string | null;
+  email?: string | null;
+  barrierefrei?: number;
+  integrativ?: number;
+  typ?: number;
+  art?: string;
+  standortTyp?: string;
+  bezeichnungZusatz?: string;
+  profile?: string;
+  sprachen?: string;
+  www?: string;
+  traegerTyp?: number;
+  bezugNr?: string;
+  gebietsArtNummer?: number;
+  sNummer?: number;
+  nummer?: number;
+  globalId?: string;
+  creationDate?: string;
+  creator?: string;
+  editDate?: string;
+  editor?: string;
+}
