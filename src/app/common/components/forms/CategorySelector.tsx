@@ -50,27 +50,25 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
         {categories.map((category) => (
           <label
             key={category.value}
-            className="flex flex-col items-start p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200"
+            className="flex items-center p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition duration-200"
           >
-            <div className="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                value={category.value}
-                checked={selectedCategories.includes(category.value)}
-                onChange={() => onCategoryChange(category.value)}
-                className="form-checkbox h-4 w-4 sm:h-5 sm:w-5 text-indigo-600 rounded focus:ring-indigo-500"
-              />
-              <span className="text-gray-700 text-xs sm:text-sm">
-                {category.label}
-              </span>
-            </div>
+            <input
+              type="checkbox"
+              value={category.value}
+              checked={selectedCategories.includes(category.value)}
+              onChange={() => onCategoryChange(category.value)}
+              className="form-checkbox h-4 w-4 sm:h-5 sm:w-5 text-indigo-600 rounded focus:ring-indigo-500 mr-2"
+            />
+            <span className="text-gray-700 text-xs sm:text-sm">
+              {category.label}
+            </span>
             <input
               type="color"
               value={categoryColors[category.value]}
               onChange={(e) =>
                 handleColorChange(category.value, e.target.value)
               }
-              className="mt-2"
+              className="h-4 w-4 sm:h-5 sm:w-5 rounded-full ml-auto" 
             />
           </label>
         ))}
