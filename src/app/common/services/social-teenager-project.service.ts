@@ -5,17 +5,7 @@ import { Feature } from '../models/feature.model';
 export const getSocialTeenagerProjects = (): Observable<Feature[]> => {
   return from(
     api
-      .get<Feature[]>('/social-teenager-projects')
-      .then((response) => response.data)
-  );
-};
-
-export const getSocialTeenagerProjectById = (
-  id: number
-): Observable<Feature> => {
-  return from(
-    api
-      .get<Feature>(`/social-teenager-projects/${id}`)
+      .get<Feature[]>('data/social-teenager-projects')
       .then((response) => response.data)
   );
 };

@@ -21,10 +21,10 @@ const CategorySelector: React.FC<CategorySelectorProps> = ({
   const [categoryColors, setCategoryColors] = useState<{
     [key: string]: string;
   }>({
-    school: "#ffffff",
-    kindergarten: "#ffffff",
-    "social-child-project": "#ffffff",
-    "social-teenager-project": "#ffffff",
+    "school": "#ff0000",
+    "kindergarten": "#269254",
+    "social-child-project": "#091DAF",
+    "social-teenager-project": "#9D09B2",
   });
 
   const handleColorChange = (category: string, color: string) => {

@@ -17,7 +17,14 @@ const MapComponent = dynamic(
 
 const HomePage: NextPage = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [categoryColors, setCategoryColors] = useState<{ [key: string]: string }>({});
+  const [categoryColors, setCategoryColors] = useState<{
+    [key: string]: string;
+  }>({
+    "school": "#ff0000",
+    "kindergarten": "#269254",
+    "social-child-project": "#091DAF",
+    "social-teenager-project": "#9D09B2",
+  });
 
   const { isAuthenticated } = useAuth();
   const router = useRouter();
