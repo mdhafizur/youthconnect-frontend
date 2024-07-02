@@ -66,7 +66,7 @@ const HomePage: NextPage = () => {
       <div
         className="relative flex items-center justify-center"
         style={{
-          height: 'calc(100vh - 25rem)', // Adjust based on the height of the header and footer
+          height: 'calc(100vh - 10rem)', // Adjust based on the height of the header and footer
         }}
       >
         <div className="w-full h-full rounded-lg mb-8">

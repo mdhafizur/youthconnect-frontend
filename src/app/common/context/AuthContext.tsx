@@ -120,6 +120,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       }
     } catch (error) {
       console.error('Login failed:', error);
+      toast.error(error.response.data.message);
       setIsAuthenticated(false);
       setUser(null);
       localStorage.removeItem('user');

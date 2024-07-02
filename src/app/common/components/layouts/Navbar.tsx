@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ className, toggleSidebar }) => {
   };
 
   return (
-    <nav className={`bg-gray-900 p-4 ${className}`}>
+    <nav className={`bg-gray-900 p-4 portrait:p-4 landscape:p-0 ${className}`}>
       <div className="container mx-auto flex justify-between items-center">
         <button
           onClick={toggleSidebar}

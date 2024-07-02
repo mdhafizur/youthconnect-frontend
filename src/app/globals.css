@@ -28,3 +28,17 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@media (orientation: landscape) {
+  .landscape\:p-0 {
+    padding: 0;
+  }
+}
+
+
+@media (orientation: portrait) {
+  .portrait\:p-4 {
+    padding: 1rem;
+  }
+}

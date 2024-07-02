@@ -41,15 +41,15 @@ export default function RootLayout({
         <AuthProvider>
           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
           <Navbar
-            className="h-[8vh] fixed top-0 left-0 right-0 z-30"
+            className="h-[10vh] fixed top-0 left-0 right-0 z-30 flex items-center justify-between"
             toggleSidebar={toggleSidebar}
           />{" "}
-          <div className="flex flex-col flex-grow pt-[8vh] pb-[8vh] overflow-hidden">
+          <div className="flex flex-col flex-grow pt-[10vh] pb-[8vh] overflow-hidden">
             <Toaster position="top-right" />
             <main className="flex-grow overflow-auto bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-opacity-50">
               {children}
             </main>
-            <Footer className="h-[8vh] fixed bottom-0 left-0 right-0 z-30" />
+            <Footer className="h-[8vh] fixed bottom-0 left-0 right-0 z-30 flex items-center justify-center" />
           </div>
         </AuthProvider>
       </body>
